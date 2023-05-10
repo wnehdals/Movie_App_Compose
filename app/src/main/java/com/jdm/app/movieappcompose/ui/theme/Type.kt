@@ -1,4 +1,4 @@
-package com.hiconsy.app.movieappcompose.ui.theme
+package com.jdm.app.movieappcompose.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,4 +1,4 @@
-package com.hiconsy.app.movieappcompose.ui.theme
+package com.jdm.app.movieappcompose.ui.theme
 
 import android.app.Activity
 import android.os.Build
