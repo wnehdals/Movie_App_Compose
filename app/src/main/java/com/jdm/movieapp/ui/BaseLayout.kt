@@ -26,6 +26,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.jdm.design.theme.HNavigationBarItem
 import com.jdm.design.theme.JdmTheme
+import com.jdm.search.SearchScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -90,7 +91,7 @@ fun BaseLayout(
             modifier = Modifier.padding(paddingValues = paddingValue)
         ) {
             composable(BottomNavItem.Search.route) {
-                SettingsScreen()
+                SearchScreen()
             }
             composable(BottomNavItem.Favorite.route) {
                 SettingsScreen2()

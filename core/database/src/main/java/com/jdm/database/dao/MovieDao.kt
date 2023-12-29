@@ -7,14 +7,14 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface MovieDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(movieEntity: MovieEntity)
+    suspend fun insert(movieEntity: MovieEntity)
 
     @Update
-    fun updateAll(movieEntities: List<MovieEntity>)
+    suspend fun updateAll(movieEntities: List<MovieEntity>)
 
     @Delete
-    fun delete(movieEntity: MovieEntity)
+    suspend fun delete(movieEntity: MovieEntity)
 
     @Query("SELECT * FROM MOVIE ORDER BY RANK ASC" )
-    fun loadAll(): Flow<List<MovieEntity>>
+    suspend fun loadAll(): List<MovieEntity>
 }

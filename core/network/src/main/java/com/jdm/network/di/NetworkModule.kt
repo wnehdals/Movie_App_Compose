@@ -1,6 +1,5 @@
 package com.jdm.network.di
 
-import com.jdm.movieapp.BuildConfig
 import com.jdm.network.api.ApiService
 import dagger.Module
 import dagger.Provides
@@ -36,7 +35,7 @@ object NetworkModule {
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl(BuildConfig.BASE_URL)
+            .baseUrl("https://www.omdbapi.com")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

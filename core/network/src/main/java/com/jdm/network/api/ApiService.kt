@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface ApiService {
     @GET("/")
     suspend fun getSearchResp(
-        @Query("apikey") apiKey: String,
+        @Query("apikey") apiKey: String = "",
         @Query("s") keyword: String,
         @Query("page") page: Int
     ): Response<SearchResp>

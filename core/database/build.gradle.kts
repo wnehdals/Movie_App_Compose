@@ -39,7 +39,7 @@ android {
 
 dependencies {
     implementation(ROOM.ROOM)
-    annotationProcessor(ROOM.ROOM_COMPILER)
+    kapt(ROOM.ROOM_COMPILER)
     implementation(ROOM.ROOM_KTX)
 
     implementation(HILT.HILT)

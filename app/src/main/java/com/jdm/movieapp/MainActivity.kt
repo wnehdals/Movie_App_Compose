@@ -11,7 +11,9 @@ import androidx.compose.ui.Modifier
 import com.jdm.movieapp.ui.BaseLayout
 import com.jdm.movieapp.ui.BottomNavItem
 import com.jdm.movieapp.ui.theme.MovieAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

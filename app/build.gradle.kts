@@ -1,4 +1,3 @@
-import AndroidX.COMPOSE_ACTIVITY
 import AndroidX.COMPOSE_MATERIAL
 import AndroidX.NAVIGATION
 import Versions.JVM_TARGET
@@ -23,8 +22,6 @@ android {
         targetSdk = AppConfig.targetSdk
         versionCode = AppConfig.versionCode
         versionName = AppConfig.versionName
-        buildConfigField("String", "API_KEY", getApiKey("API_KEY"))
-        buildConfigField("String", "BASE_URL", getApiKey("BASE_URL"))
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -64,12 +61,13 @@ android {
 
 dependencies {
     api(project(mapOf("path" to ":core:designsystem")))
+    implementation(project(mapOf("path" to ":feature:search")))
+
 
     implementation(KTX.CORE)
     implementation(AndroidX.LIFECYCLE)
     implementation(AndroidX.COMPOSE)
     implementation(platform(AndroidX.COMPOSE_BOM))
-    implementation(COMPOSE_ACTIVITY)
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")

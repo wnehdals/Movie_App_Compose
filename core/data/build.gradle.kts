@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "com.hiconsy.data"
+    namespace = "com.jdm.data"
     compileSdk = AppConfig.compileSdk
 
     defaultConfig {
@@ -41,8 +41,11 @@ android {
 dependencies {
     api(project(mapOf("path" to ":core:database")))
     api(project(mapOf("path" to ":core:network")))
+    api(project(mapOf("path" to ":core:common")))
+    api(project(mapOf("path" to ":core:model")))
 
     implementation(RETROFIT.RETROFIT)
     implementation(HILT.HILT)
     kapt(HILT.HILT_COMPILER)
+    implementation("androidx.compose.runtime:runtime:1.3.3")
 }

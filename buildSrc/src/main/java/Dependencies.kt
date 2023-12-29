@@ -1,6 +1,7 @@
 import Versions.KOTLIN_VERSION
 import Versions.coroutine_version
 import Versions.hilt_version
+import Versions.lifecycle_version
 import Versions.okhttp_version
 import Versions.retrofit_version
 import Versions.room_version
@@ -16,6 +17,7 @@ object Versions {
     const val coroutine_version = "1.5.2"
     const val hilt_version = "2.44"
     const val room_version = "2.5.0"
+    const val lifecycle_version = "2.5.1"
 }
 
 object Kotlin {
@@ -29,12 +31,13 @@ object KTX {
 object AndroidX {
     const val MATERIAL = "com.google.android.material:material:1.9.0"
     const val APP_COMPAT = "androidx.appcompat:appcompat:1.5.1"
-    const val LIFECYCLE = "androidx.lifecycle:lifecycle-runtime-ktx:2.6.2"
-    const val COMPOSE = "androidx.activity:activity-compose:1.7.0"
+    const val LIFECYCLE = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    const val COMPOSE = "androidx.activity:activity-compose:1.8.0"
     const val COMPOSE_BOM = "androidx.compose:compose-bom:2023.03.00"
-    const val COMPOSE_ACTIVITY = "androidx.activity:activity-compose:1.8.0"
     const val NAVIGATION = "androidx.navigation:navigation-compose:2.5.3"
     const val COMPOSE_MATERIAL = "androidx.compose.material:material:1.3.1"
+    const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
+    const val COMPOSE_RUNTIME = "androidx.lifecycle:lifecycle-runtime-compose:$lifecycle_version"
 }
 
 object Coroutines {
@@ -67,4 +70,7 @@ object ROOM {
     const val ROOM_COMPILER = "androidx.room:room-compiler:$room_version"
     const val ROOM_KTX = "androidx.room:room-ktx:$room_version"
 
+}
+object COIL {
+    const val COIL = "io.coil-kt:coil-compose:2.5.0"
 }

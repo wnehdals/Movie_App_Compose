@@ -1,10 +1,14 @@
+import AndroidX.NAVIGATION
+import Versions.KOTLIN_COMPILER_EXTENTION
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
-    namespace = "com.hiconsy.favorite"
+    namespace = "com.jdm.favorite"
     compileSdk = AppConfig.compileSdk
 
     defaultConfig {
@@ -22,6 +26,12 @@ android {
             )
         }
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = KOTLIN_COMPILER_EXTENTION
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -33,4 +43,24 @@ android {
 
 dependencies {
     api(project(mapOf("path" to ":core:designsystem")))
+    implementation(project(mapOf("path" to ":core:data")))
+
+
+    implementation(KTX.CORE)
+    implementation(AndroidX.LIFECYCLE)
+    implementation(AndroidX.COMPOSE)
+    implementation(platform(AndroidX.COMPOSE_BOM))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.runtime:runtime")
+    implementation("androidx.compose.ui:ui-graphics")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
+    implementation(COIL.COIL)
+    implementation(NAVIGATION)
+    implementation(HILT.HILT)
+    kapt(HILT.HILT_COMPILER)
+    androidTestImplementation(platform(AndroidX.COMPOSE_BOM))
+    debugImplementation("androidx.compose.ui:ui-tooling")
 }
