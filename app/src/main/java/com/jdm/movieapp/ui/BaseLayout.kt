@@ -24,6 +24,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.hiconsy.favorite.FavoriteScreen
 import com.jdm.design.theme.HNavigationBarItem
 import com.jdm.design.theme.JdmTheme
 import com.jdm.search.SearchScreen
@@ -94,7 +95,7 @@ fun BaseLayout(
                 SearchScreen()
             }
             composable(BottomNavItem.Favorite.route) {
-                SettingsScreen2()
+                FavoriteScreen()
             }
         }
     }

@@ -27,7 +27,6 @@ fun HToggleButton(
             contentColor = JdmTheme.colors.gray300,
         )
     ) {
-        Log.e("htoggle button", "$checked")
         if (checked) checkedIcon() else icon()
     }
 }

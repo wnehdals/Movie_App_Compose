@@ -62,6 +62,7 @@ android {
 dependencies {
     api(project(mapOf("path" to ":core:designsystem")))
     implementation(project(mapOf("path" to ":feature:search")))
+    implementation(project(mapOf("path" to ":feature:favorite")))
 
 
     implementation(KTX.CORE)

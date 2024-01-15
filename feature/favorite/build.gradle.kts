@@ -1,3 +1,4 @@
+import AndroidX.COMPOSE_RUNTIME
 import AndroidX.NAVIGATION
 import Versions.KOTLIN_COMPILER_EXTENTION
 plugins {
@@ -51,12 +52,12 @@ dependencies {
     implementation(AndroidX.COMPOSE)
     implementation(platform(AndroidX.COMPOSE_BOM))
     implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.runtime:runtime")
+    implementation("androidx.compose.runtime:runtime:1.3.3")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
+    implementation(COMPOSE_RUNTIME)
     implementation(COIL.COIL)
     implementation(NAVIGATION)
     implementation(HILT.HILT)
